@@ -36,6 +36,7 @@ h1, h2, h3 {
 }
 .navigation a{
     text-decoration: none;
+    color: var(--offset-white);
 }
 .main-content{
     grid-column: 1/3;
