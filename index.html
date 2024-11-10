@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles/base.css">
+    <script defer src="scripts/getdates.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Stacy Yarrington- Home Page">
+    <meta name="author" content="Stacy Yarrington">
+    <title>WDD 131 - Dynamic Web Fundamentals - Stacy Yarrington</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Poppins:ital,wght@0,100;0,400;1,400&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Stacy Yarrington</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/stacy-yarrington-32a4742b7/">Linked In</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/2-chr/32?lang=eng#p7">Favorite Scripture</a></li>
+                <li><a href="">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-grid">
+        <section class="card card1">
+         <h3>About Me</h3>
+         <div class="card1-item1"><p>My name is Stacy Yarrington. I am from Spanish Fork, UT. I have 6 kids and I am a software developer for a living. I have worked for a company called Enuit for the last 12 years. They are based out of Houston, TX. In my free time I like to play the piano, run, and spend time with my family.</p></div>
+         <div class="card1-item2"><img src="images/profile.jpg" alt="profile"></div>
+         <div class ="card1-item3"><h4>Spanish Fork, UT</h4>
+         <hr class="divider">
+         </div>
+         <div class="card1-item4"><img src="images/spanishfork.jpg" alt="Spanish Fork">
+         <p>Spanish Fork was founded in 1855. It was attractive to the Native Americans, particularly the Ute people, because of the beautiful Spanish Fork River that flowed through the valley. In the late 1700's the Dominguez-Escalante expedition came through the area looking for a route from New Mexico to California. In 1851 a group of Mormons settled in the valley and it thrived and grew. Many Icelandic immigrants also settled here in the late 1800's and there is a monument built for them near the center of the city.
+            Today Spanish Fork continues to grow and thrive.
+         </p> 
+        </div>
+        </section>
+        <section class="card card2">
+        <h3>Web Dev Resources</h3>
+        <div class="card2-main-content">
+            <ul>
+                <li><a href="https://coolors.co/">Make a web color palette</a></li>
+                <li><a href="https://app.moqups.com/">Create a Moqup for a web page</a></li>
+                <li><a href="https://pixlr.com/">Edit pictures</a></li>
+                <li><a href="https://www.byui.edu/canvas-authentication/">BYUI Canvas</a></li>
+                <li><a href="https://www.enuit.com/">Who I work for</a></li>                
+            </ul>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <p class="flex-paragraph">©<span id="currentYear"></span> 🙂 Stacy Yarrington 🙂 Utah</p>
+        <p class="flex-paragraph"><span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>
