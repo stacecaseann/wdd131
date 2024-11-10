@@ -6,4 +6,3 @@ yearField.textContent = year;
 
 const lastModifiedField = document.querySelector("#lastModified");
 lastModifiedField.innerHTML = `<span class="highlight">Last Modification:</span> ${document.lastModified}`;
-
