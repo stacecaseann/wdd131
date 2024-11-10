@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #53759C;
-    --secondary-color: #98C1D9;
-    --light-color: #E0FBFC;
-    --accent-color: #926876;
+    --primary-color: #152639;
+    --secondary-color: #bed7e6;
+    --light-color: #d7f4f5;
+    --accent-color: #945368;
     --dark-color: #293241;   
     --heading-font: "Klee One";
     --normal-font: "Poppins";
@@ -37,7 +37,7 @@ h3{
 }
 h4{
     text-align: center;
-    color: var(--accent-color);
+    color: var(--dark-color);
     margin: .5rem;
 }
 p{
@@ -70,11 +70,10 @@ nav a{
     display: block;
     color: var(--light-color);
     text-decoration: none;
-    color: var(--dark-color)
 }
 nav a:hover {
 	/* text-decoration:overline; */
-    color: var(--light-color)
+    color: white;
 }
 main{
     max-width: 1000px;
@@ -171,7 +170,7 @@ footer{
     padding: .5rem;
 }
 .highlight{
-    color: var(--accent-color);
+    color: var(--dark-color);
 }
 .divider{
     border: none;
