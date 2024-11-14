@@ -1,0 +1,25 @@
+:root {
+    --maximum-width: 640px;
+    --border: .5px;
+    --padding: 5px;
+    --background-color: #bed7e6;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+header, main, footer{
+    max-width: var(--maximum-width);
+    padding: var(--padding);
+    background-color: var(--background-color);
+    border: var(--border-size) solid darkblue;
+    margin: 1rem auto;
+}
+.main-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+section{
+    background-color: #d7f4f5;
+    padding: 1rem;
+}
