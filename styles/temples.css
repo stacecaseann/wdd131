@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #744253;
+    --light-brown: #D7BEA8;
+    --med-brown: #B49286;
+    --light-color: #F3D9DC;
+    --accent-color: #C78283;
+    --dark-color: #293241;   
+    --heading-font: "Klee One";
+    --normal-font: "Poppins";
+    --h1-font-size: 24px;
+    --h2-font-size: 18px;
+    --h3-font-size: 18px;
+    --p-font-size: 12px;
+    --padding: 1rem;
+    --border-radius: 30px;
+}
+body{
+    font-family: var(--normal-font), serif;
+    max-width: 1000px;
+
+}
+h1{
+    font-family: var(--heading-font), serif;
+    padding: var(--padding);
+    font-size: var(--h1-font-size);
+    text-align: center;
+}
+h1, h2, h3{
+    font-weight: bold;
+    text-align: center;
+}
+h2{
+    font-size: var(--h2-font-size); 
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: var(--padding);
+}
+p{
+    font-size: var(--p-font-size);
+    padding: var(--padding);
+}
+header{
+    background-color: var(--light-brown);
+    color: var(--dark-color);
+}
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	/* color: #000; */
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "x";
+}
+.navigation{
+    background-color: var(--primary-color);
+    display: none;
+    width: 100%;
+}
+.navigation ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.navigation li {
+    padding: .5rem;
+    text-align: center;
+}
+.navigation a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--light-color);
+    text-decoration: none;
+}
+.navigation a:hover {
+	/* text-decoration:overline; */
+    color: white;
+    font-weight: 700;
+}
+/* .navigation ul a.selected{
+    font-weight: bold;
+    color: black;
+} */
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.navigation.open {
+    display: flex; /* Show the <ul> when .navigation has the 'open' class */
+    flex-direction: column;
+}
+
+footer{
+    background-color: var(--light-brown);
+    color: var(--dark-color);
+    padding: 0px;
+}
+
+.flex-paragraph{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+    padding: .5rem;
+}
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+}
+ .temple-item{
+    object-fit: contain;
+    overflow: hidden;
+    margin: 0;
+} 
+.temple-item img{
+    max-width: 150px;
+} 
+/* .active::before {
+	content: "◽ ";  
+} This makes the text too off balance */
