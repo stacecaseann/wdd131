@@ -1,0 +1,42 @@
+@media screen and (min-width: 500px)
+{
+    .hero{
+        position: relative;
+    }
+    h2{
+        background-color: var(--dark-green);
+        color: var(--light-white);
+    }
+    h2.weather-heading::after{
+        content: "  ⛅"
+    }
+    .hero-item
+    {
+        display: block;
+        letter-spacing: .5px;
+        background-color: rgba(255, 255, 255, 0.5);
+        max-width: 40%;
+
+    }
+    .hero-item table{
+        padding: var(--padding);
+    }
+    .hero-item1
+    {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        
+    }
+    .hero-item2
+    {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .hero-item2 img {
+        display: none; /* Hides the image */
+    }
+}
