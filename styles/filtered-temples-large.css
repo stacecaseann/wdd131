@@ -1,0 +1,36 @@
+@media screen and (min-width: 640px)
+{
+    .main-grid{
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+    #menu {
+		display: none; /* hide hamburger button */
+	}
+
+    .navigation {
+        display: flex; /* Show the navigation as a flex container */
+        flex-direction: row; /* Align the menu items horizontally */
+        max-width: 100%;
+        justify-content: space-between;
+    }
+    .navigation ul{
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .navigation li{
+        flex:1;
+    }
+    .navigation a {
+		display: block;
+        text-align: center;
+        text-decoration: none;
+		flex: 1 1 100%;
+	}
+    .navigation.open {
+        display: flex; /* Prevent hiding due to open class */
+    }
+}
