@@ -110,29 +110,31 @@ const temples = [
 {
     if (index < 3)
     {
-        return `<div class="temple-card">
+        const templeDiv = `<div class="temple-card">
         <h3>${temple.templeName}</h3>
         <table>
         <tr><td>Location:</td><td>${temple.location}</td></tr>
         <tr><td>Dedicated:</td><td>${temple.dedicated}</td></tr>
         <tr><td>Size:</td><td>${temple.area}</td></tr>
         </table>
-        <img src=${temple.imageUrl} width=400 height=250 alt=${temple.templeName}>
-        </div>    
-        `;
+        <img src="${temple.imageUrl}" width=400 height=250 alt="${temple.templeName}">
+        </div>`;
+        console.log(templeDiv);
+        return templeDiv;
     }
     else 
     {
-        return `<div class="temple-card">
+        const templeDiv = `<div class="temple-card">
         <h3>${temple.templeName}</h3>
         <table>
         <tr><td>Location:</td><td>${temple.location}</td></tr>
         <tr><td>Dedicated:</td><td>${temple.dedicated}</td></tr>
         <tr><td>Size:</td><td>${temple.area}</td></tr>
         </table>
-        <img src=${temple.imageUrl} loading="lazy" width=400 height=250 alt=${temple.templeName}>
-        </div>    
-        `;
+        <img src="${temple.imageUrl}" loading="lazy" width=400 height=250 alt="${temple.templeName}">
+        </div>`;
+        console.log(templeDiv);
+        return templeDiv;
     }
 }
 
@@ -140,10 +142,9 @@ function renderTemples(temples)
 {
     const mainGrid = document.querySelector("#mainGrid");
 
-    const templeHtml = temples.map((temple, index) => 
-        {
-            createTempleItemTemplate(temple, index);
-        });
+    const templeHtml = temples.map((temple, index) =>         
+            createTempleItemTemplate(temple, index)
+        );
     mainGrid.innerHTML = templeHtml.join('');
 }
 
