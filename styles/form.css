@@ -1,0 +1,173 @@
+:root{
+    --rich-black: #0D1321;
+    --linen: #FFEDDF;
+    --blue: #6EB4D1;
+    --brown: #86615C;
+    --aqua: #bbf5e0;
+    --heading-font: "Klee One";
+    --normal-font: "Poppins";
+    --h1-font-size: 24px;
+    --h2-font-size: 18px;
+    --h3-font-size: 18px;
+    --p-font-size: 12px;
+    --padding: 1rem;
+    --border-radius: 10px;
+    --max-width: 400px;
+}
+body{
+    font-family: var(--normal-font), serif;
+    max-width: 1000px;
+}
+h1{
+    font-family: var(--heading-font), serif;
+    padding: var(--padding);
+    font-size: var(--h1-font-size);
+}
+h1, h2, h3{
+    font-weight: bold;
+}
+/* h2{
+    font-weight: normal;
+    font-size: var(--h2-font-size); 
+    background-color: var(--blue);
+    color: var(--dark-color)
+} */
+h3{
+    font-size: var(--h3-font-size);
+}
+header{
+    background-color: var(--blue);
+    color: var(--rich-black);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* FORM */
+
+.product-form fieldset{
+    margin: 2rem 0;
+    border: 2px solid var(--rich-black);
+    border-radius: var(--border-radius);
+    background-color: var(--linen);
+}
+.product-form div{
+    padding-top: var(--padding);
+    font-size: .9rem;
+    color: var(--rich-black);    
+}
+.product-form label,
+.product-form .star-rating-label
+{
+    display: block;
+    color: var(--brown);
+    font-size: .9rem;
+    padding-top: var(--padding);
+}
+.product-form input[type="text"],
+/* .product-form input[type="radio"], */
+/* .product-form input[type="checkbox"], */
+.product-form textarea,
+.product-form input[type="date"],
+.product-form select
+{
+    display: block;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: var(--padding);
+    /* appearance: none; This is needed so browesr emulation doesn't overwrite it */
+    box-sizing: border-box;/*This says calculate the padding inside the size */
+    font-family: var(--normal-font);
+    border: 1px solid var(--brown);
+}
+
+.product-form input[type="checkbox"]
+{
+    margin-right: 6px;
+}
+.rhighlight{
+    color: #A20D0D;
+}
+.ohighlight{
+    color: blue;
+    font-size: .8rem;
+}
+.smaller{
+    display: block;
+    font-size: .8rem;
+}
+.product-form input[type="submit"]
+{
+    border: none;
+    background-image: linear-gradient(var(--blue), var(--aqua));
+    color: var(--rich-black);
+    border-radius: var(--border-radius);
+    width: 96%;
+    padding: var(--padding);
+    max-width: var(--max-width);    
+    box-shadow: 1px 1px 4px #999;
+    margin: 1rem;
+    transform: translateX(-15px);
+    }
+/* STAR RATING */
+.star-rating input[type="radio"] {
+    display: none;
+}
+.star-rating {
+    display: flex;
+    align-items: center;
+    /* padding-top: 10rem; */
+    /* width: 160px; */
+    flex-direction: row-reverse;
+    justify-content: left;
+    /* margin: 40px auto; */
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+}
+.star-rating > label{
+    width: 30px;
+    height: 20px;
+    font-family:Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color:orange;
+    padding-top:0;
+}
+.star-rating label:hover{
+    color: var(--blue);
+    transition: 0.2s ease;
+}
+.star-rating label:active::before{
+    transform:scale(1.1);
+}
+.star-rating label::before{
+    content: '\2606';
+    position:absolute;
+    top: 0px;
+    /* line-height: 26px;     */
+}
+.star-rating input:checked ~ label:before {
+    content:'\2605';
+  }
+@-moz-document url-prefix() {
+    .star-rating input:checked ~ label:before {
+    font-size: 36px;
+    line-height: 21px;
+    }
+  } 
+
+  /* FOOTER */
+  footer{
+    background-color: var(--aqua);
+    color: var(--rich-black);
+    padding: 0px;
+}
+
+.flex-paragraph{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+    padding: var(--padding);
+}

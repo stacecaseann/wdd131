@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/form.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Stacy Yarrington- Product Review Form">
+    <meta name="author" content="Stacy Yarrington">
+    <title>WDD 131 - Dynamic Web Fundamentals - Stacy Yarrington - Product Review Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+       <form method="get" action="review.html" class="product-form" id="product-form">
+            <fieldset>
+                <label>Product Name<span class="rhighlight">*</span>
+                <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </label>
+
+                <div class="star-rating-label">Star Rating<span class="rhighlight">*</div>
+                <div class="star-rating">
+                    <input type="radio" name="stars" id="star-a" value="5" required>
+                    <label for="star-a"></label>
+                
+                    <input type="radio" name="stars" id="star-b" value="4">
+                    <label for="star-b"></label>
+                
+                    <input type="radio" name="stars" id="star-c" value="3">
+                    <label for="star-c"></label>
+                
+                    <input type="radio" name="stars" id="star-d" value="2">
+                    <label for="star-d"></label>
+                
+                    <input type="radio" name="stars" id="star-e" value="1">
+                    <label for="star-e"></label>
+                </div>
+
+                <label>Date of Installation<span class="rhighlight">*<input type="date" name="install-date" id="install-date" required></label>
+
+                <div>Which features did you find useful in the product? <span class="smaller">(Check all that Apply)</span></div>
+                <label><input type="checkbox" name="useful" id="durability" value="durability">Durability</label>
+                <label><input type="checkbox" name="useful" id="ease" value="ease">Ease of Use</label>
+                <label><input type="checkbox" name="useful" id="performance" value="performance">Performance</label>
+                <label><input type="checkbox" name="useful" id="design" value="design">Design</label>
+       
+                <label>Written Review <span class="ohighlight">(Optional)</span>
+                    <textarea rows="3" name="review" id="review"></textarea>
+                </label>
+
+                <label>Your Name <span class="ohighlight">(Optional)</span>
+                    <input type="text" name="fname" id="name">
+                </label>
+
+                <input type="submit" value="Post Review">
+            </fieldset>
+       </form>
+    </main>
+    <footer>
+        <p class="flex-paragraph">©<span id="currentYear"></span> 🙂 Stacy Yarrington 🙂 Utah</p>
+        <p class="flex-paragraph"><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
