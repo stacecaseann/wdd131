@@ -43,10 +43,13 @@ td:first-child:not(:only-child)
 }
 .color-item
 {
-    flex: 1 1 auto;
+    flex: 1 1 20%;
     display:flex;
     align-items: center;
     justify-content: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
 }
 .color1
 {    
