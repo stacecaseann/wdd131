@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-large.css">
+    <script defer src="scripts/project.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Stacy Yarrington- Craftin Critters Club">
+    <meta name="author" content="Stacy Yarrington">
+    <title>WDD 131 - Dynamic Web Fundamentals - Stacy Yarrington - Craftin Critters Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img src="images/craftincritterslogo.png" alt="logo" width="35" height="35">
+            <h1>Craftin' critters club</h1>
+        </div>
+        <button id="menu" aria-label="Open menu"></button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <main>
+        <h2>Past Events</h2>
+        <div class="event-gallery">
+            <figure class="event">
+                <div class="event-image"></div>
+                <figcaption>This happened</figcaption>
+            </figure>
+            <figure class="event">
+                <div class="event-image"></div>
+                <figcaption>And This happened</figcaption>
+            </figure>
+            <figure class="event">
+                <div class="event-image"></div>
+                <figcaption>Then This happened</figcaption>
+            </figure>
+        </div>
+        <h2>Upcoming Events</h2>
+        <div class="upcoming-event-gallery">
+            <div class="left-arrow"><button id="left-arrow">←</button></div>
+            <div class="item-gallery" id="item-gallery"></div>            
+        <div class="right-arrow" id="right-arrow"><button >→</button></div>
+        </div>
+    </main>
+    <footer>
+        <p class="flex-paragraph">©<span id="currentYear"></span> 🙂 Stacy Yarrington 🙂 Utah</p>
+    </footer>
+</body>
+</html>
