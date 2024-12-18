@@ -61,12 +61,12 @@
         width:100%;
         height: auto;
     }
-    .gallery-item a {
+    .gallery-item picture {
         display: block; 
         width: 100%;    
         height: auto;   
     }
-    .gallery-item img{
+    .gallery-item picture img{
         box-sizing: border-box;
         width: 100%;
         height: auto;

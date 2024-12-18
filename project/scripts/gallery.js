@@ -163,7 +163,10 @@ function createGalleryItemTemplate(galleryItem, index)
     if (index < 3)
     {
         const galleryItemDiv = `<figure class="gallery-item">
+        <picture>
+        <source srcset="images/${galleryItem.largeImageName}" media="(min-width:640px)">
         <img src="images/${galleryItem.smallImageName}" alt="${galleryItem.alt}" width="150" height="200">
+        </picture>
         <figcaption>${galleryItem.label}</figcaption>
         </figure>`;
         return galleryItemDiv;
@@ -171,27 +174,16 @@ function createGalleryItemTemplate(galleryItem, index)
     else 
     {
         const galleryItemDiv = `<figure class="gallery-item">
-        <a href="images/${galleryItem.largeImageName}"><img loading="lazy" src="images/${galleryItem.smallImageName}" alt="${galleryItem.alt}" width="150" height="200"></a>
+        <picture>
+        <source srcset="images/${galleryItem.largeImageName}" media="(min-width:640px)">
+        <img loading="lazy" src="images/${galleryItem.smallImageName}" alt="${galleryItem.alt}" width="150" height="200">
+        </picture>
         <figcaption>${galleryItem.label}</figcaption>
         </figure>`;
         return galleryItemDiv;
     }
 }
-function createGalleryItemTemplateOLD(galleryItem, index)
-{
-    if (index < 3)
-    {
-        const galleryItemDiv = `
-        <a href="images/${galleryItem.largeImageName}"><img src="images/${galleryItem.smallImageName}" alt="${galleryItem.alt}" width="150" height="200"></a>`;
-        return galleryItemDiv;
-    }
-    else 
-    {
-        const galleryItemDiv = `
-        <a href="images/${galleryItem.largeImageName}"><img loading="lazy" src="images/${galleryItem.smallImageName}" alt="${galleryItem.alt}" width="150" height="200"></a>`;
-        return galleryItemDiv;
-    }
-}
+
 function renderGalleryItems(galleryItems)
 {
     const mainGrid = document.querySelector("#gallery");
