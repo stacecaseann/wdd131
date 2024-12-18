@@ -3,7 +3,9 @@
     #menu {
         display: none; /* hide hamburger button */
     }
-
+    .title h1{
+        display: block;
+    }
     .navigation {
         display: flex; /* Show the navigation as a flex container */
         flex-direction: row; /* Align the menu items horizontally */
@@ -30,4 +32,45 @@
     .navigation.open {
         display: flex; /* Prevent hiding due to open class */
     }
+    .hero
+    {
+        display:flex;
+        flex-direction: row;
+    }
+
+   .hero-bee-before
+    {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        margin:30px;
+    }
+    .hero-bee-after
+    {
+        display: none;
+    }
+    .hero-bee-before img{
+        transform:rotate(-30deg);
+    } 
+     .gallery{
+        grid-template-columns: repeat(3, 1fr);
+    } 
+    .gallery-item{
+        display:flex;
+        width:100%;
+        height: auto;
+    }
+    .gallery-item a {
+        display: block; 
+        width: 100%;    
+        height: auto;   
+    }
+    .gallery-item img{
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    } 
+    
 }
