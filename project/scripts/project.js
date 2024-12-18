@@ -36,7 +36,7 @@ const images = [
         text:"This is event 7"
     },
 ];
-const numItemsToDisplay = 3;
+let numItemsToDisplay = 3;
 function createGalleryItem(image)
 {
     const eventItem = `<figure class="event">
@@ -45,16 +45,6 @@ function createGalleryItem(image)
     </figure>`;
     return eventItem;
 }
-// function renderGalleryItems(galleryImages,startItem,endItem)
-// {
-//     var leftArrow = document.querySelector(".left-arrow");
-//     const galleryHtml = galleryImages
-//         .filter( x=> x.itemNumber >= startItem && x.itemNumber <= endItem)
-//         .map((galleryItem) =>
-//         createGalleryItem(galleryItem)
-//     );
-//     leftArrow.insertAdjacentHTML('afterend',galleryHtml.join(''));
-// }
 
 function renderGalleryItems(startItem)
 {
@@ -123,10 +113,26 @@ function moveGalleryRight()
     setGalleryStartIndex(startItem);
     renderGalleryItems(getGalleryStartIndex());   
 }
-renderGalleryItems(getGalleryStartIndex());
+function checkMediaQuery()
+{
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    if(mediaQuery.matches)
+    {
+        numItemsToDisplay=3;
+    }
+    else
+    {
+        numItemsToDisplay=1;
+    }
+    renderGalleryItems(getGalleryStartIndex());
+}
+checkMediaQuery();
+//renderGalleryItems(getGalleryStartIndex());
 
 const leftArrow = document.getElementById("left-arrow");
 leftArrow.addEventListener("click", moveGalleryLeft);
 
 const rightArrow = document.getElementById("right-arrow");
 rightArrow.addEventListener("click", moveGalleryRight);
+
+window.matchMedia("(min-width: 640px)").addEventListener("change", checkMediaQuery);

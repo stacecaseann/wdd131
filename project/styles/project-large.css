@@ -72,5 +72,11 @@
         height: auto;
         object-fit: contain;
     } 
-    
+    .event-gallery{
+        flex-direction: row;
+    }
+
+    .item-gallery{
+        grid-template-columns: 33% 33% 33%;
+    }
 }
