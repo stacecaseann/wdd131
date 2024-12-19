@@ -315,7 +315,7 @@ header{
     display: block;
     font-size: .8rem;
 }
-/* placeholders */
+
 .photo
 {
     width:300px;
@@ -390,7 +390,7 @@ header{
 .upcoming-event-gallery-item img{
 
     width: auto;
-    height: 375px;
+    height: 300px;
     object-fit: contain;
     padding-top: 1rem;
 } 
