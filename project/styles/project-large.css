@@ -76,7 +76,7 @@
         flex-direction: row;
     }
 
-    .item-gallery{
+    .upcoming-event-gallery-items{
         grid-template-columns: 33% 33% 33%;
     }
 }

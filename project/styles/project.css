@@ -40,6 +40,7 @@ h2{
 }
 p{
     text-align: center;
+    padding: 1rem;
 }
 figcaption
 {
@@ -246,7 +247,6 @@ header{
     color: #585858; /* Light gray for out-of-month dates */
 }
 .show-event{
-    border: 1px solid var(--yellow);
     box-sizing: border-box;
     margin-top: 50px;
     height: 2rem;
@@ -329,10 +329,22 @@ header{
     justify-content: center;
     align-items: center;
 }
+.event-item{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.event-item picture{
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
 /* Scroll through upcoming events */
 .upcoming-event-gallery{
     display:grid;
-    grid-template-columns: 5% 90% 5%;
+    grid-template-columns: 10% 80% 10%;
     border:1px solid black;
     box-sizing: border-box; /* Include padding and border in size */
 }
@@ -345,14 +357,14 @@ header{
 }
 .upcoming-event-gallery-items{
     display:grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr;
     justify-content: space-around;
     align-items: center;
     width:100%;
     box-sizing: border-box;
     align-items:stretch;
     margin:0;
-    grid-auto-rows: 400px;
+    grid-auto-rows: 450px;
     overflow: hidden;
 }
 .upcoming-event-gallery-item{
@@ -374,12 +386,13 @@ header{
     box-sizing: border-box;
     animation: fadeSlideIn 0.5s ease-in-out;
 }
-    
+
 .upcoming-event-gallery-item img{
-    box-sizing: border-box;
+
     width: auto;
-    height: 100%;
+    height: 375px;
     object-fit: contain;
+    padding-top: 1rem;
 } 
 @keyframes fadeSlideIn {
     from {
@@ -417,8 +430,7 @@ header{
 }
 .host-right img
 {
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
 .gallery{
     display:grid;
@@ -451,50 +463,6 @@ header{
     height: auto;
     object-fit: contain;
 }
-
-
-/* Place holders */
-
-.event-image1{
-    width:100%;
-    height:250px;
-    background-color: pink;
-}
-.event-image2{
-    width:100%;
-    height:250px;
-    background-color: blue;
-}
-.event-image3{
-    width:100%;
-    height:250px;
-    background-color: green;
-}
-.event-image4{
-    width:100%;
-    height:250px;
-    background-color: yellow;
-}
-.event-image5{
-    width:100%;
-    height:250px;
-    background-color: orange;
-}
-.event-image6{
-    width:100%;
-    height:250px;
-    background-color: purple;
-}
-.event-image7{
-    width:100%;
-    height:250px;
-    background-color: red;
-}
-.event-image{
-    width:100%;
-    height:100px;
-    background-color: var(--pink);
-}
 .left-arrow{
     display:flex;
     justify-content: center;
@@ -503,6 +471,7 @@ header{
     /* width:25px;
     height:25px; */
     background-color: var(--light-brown);
+    padding: 1rem;
 }
 
 .right-arrow{
@@ -513,6 +482,7 @@ header{
     /* width:25px;
     height:25px; */
     background-color: var(--light-brown);
+    padding: 1rem;
 }
 button{
     background-color: transparent;

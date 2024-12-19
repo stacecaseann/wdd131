@@ -3,44 +3,44 @@ const images = [
     {
         itemNumber:0,
         imageName:"christmas-event-small.webp",
-        alt:"Event 1",
-        text:"This is event 1 and the text is really long so it should wrap"
+        alt:"christmas",
+        text:"Christmas Crafts at the Orem Library<br>6pm Dec 7, 2024"
     },
     {
         itemNumber:1,
-        imageName:"event2-small.webp",
-        alt:"Event 1",
-        text:"This is event 2"
+        imageName:"crochet-event.webp",
+        alt:"Crochet",
+        text:"Crochet Class at the Spanish Fork Library<br>6pm January 1, 2025"
     },
     {
         itemNumber:2,
-        imageName:"event-image3",
-        alt:"Event 1",
-        text:"This is event 3"
+        imageName:"valentines-event.webp",
+        alt:"Valentines",
+        text:"Valentine's Day Crafts at the Provo Library<br>6pm February 14, 2025"
     },
     {
         itemNumber:3,
-        imageName:"event-image4",
-        alt:"Event 1",
-        text:"This is event 4"
+        imageName:"sewing-event.webp",
+        alt:"Sewing",
+        text:"Sewing Class at the Springville Library<br>6pm March 10, 2025"
     },
     {
         itemNumber:4,
-        imageName:"event-image5",
-        alt:"Event 1",
-        text:"This is event 5"
+        imageName:"easter-event.webp",
+        alt:"Easter",
+        text:"Easter Event at the Orem Library<br>6pm April 20, 2025"
     },
     {
         itemNumber:5,
-        imageName:"event-image6",
-        alt:"Event 1",
-        text:"This is event 6"
+        imageName:"event2-large.webp",
+        alt:"Holidays",
+        text:"Holiday Crafts at the Provo Library<br>6pm December 10, 2024"
     },
     {
         itemNumber:6,
-        imageName:"event-image7",
-        alt:"Event 1",
-        text:"This is event 7"
+        imageName:"music-event.webp",
+        alt:"Craft",
+        text:"Craftin' Critters Club Meeting at the Provo Library<br>November 8, 2025"
     },
 ];
 let numItemsToDisplay = 3;
@@ -56,7 +56,10 @@ function createGalleryItem(image)
 }
 function createGalleryItemOLD(image)
 {
-    const eventItem = `<figure>
+    const eventItem = `<figure class="upcoming-event-gallery-item">
+    <picture>
+    </picture>
+    <figcaption>${image.text}</figcaption>
     </figure>`;
     return eventItem;
 }
@@ -84,11 +87,6 @@ function getGalleryStartIndex()
     let startItem = Number(window.localStorage.getItem("startIndex")) || 0;
     return startItem;
 }
-// function getGalleryEndIndex()
-// {
-//     let endItem = Number(window.localStorage.getItem("startIndex")) || 0;
-//     return (endItem + numItemsToDisplay-1)%images.length;
-// }
 function setGalleryStartIndex(startIndex)
 {
     if (startIndex >= images.length)
@@ -141,7 +139,6 @@ function checkMediaQuery()
     renderGalleryItems(getGalleryStartIndex());
 }
 checkMediaQuery();
-//renderGalleryItems(getGalleryStartIndex());
 
 const leftArrow = document.getElementById("left-arrow");
 leftArrow.addEventListener("click", moveGalleryLeft);
